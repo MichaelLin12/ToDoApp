@@ -22,6 +22,7 @@ This is a simple ToDo Application.
         4. Cleaning up the React code by using hooks other than useState along with the many useEffect hooks
         5. Redesigning the application to be a single page fit with the calendar, tasks, time, and weather
         6. Adding more functionalities for each task
+        7. Add Testing
 
 ## Get Started
 To get started, make sure a version of nodejs of *16.17.0* or higher is installed onto your machine.
