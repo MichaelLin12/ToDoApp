@@ -3,11 +3,11 @@ This is a simple ToDo Application.
 
 # Table of Contents
 
-    1. [Project Description](Readme.md#project-description)
-    2. [Get Started](Readme.md#get-started)
-    3. [Credits](Readme.md#credits)
+    1. [Project Description](README.md#project-description)
+    2. [Get Started](README.md#get-started)
+    3. [Credits](README.md#credits)
 
-# Project Description
+## Project Description
 - **What does the application do?**
     - The application is meant to be used to track tasks that need to be down each day. You are able to add and delete tasks for each day. Tasks that were created persist when opening and closing the application
 - **Why did I use these technologies?**
@@ -23,7 +23,7 @@ This is a simple ToDo Application.
         5. Redesigning the application to be a single page fit with the calendar, tasks, time, and weather
         6. Adding more functionalities for each task
 
-# Get Started
+## Get Started
 To get started, make sure a version of nodejs of *16.17.0* or higher is installed onto your machine.
 
 Use 
@@ -75,6 +75,6 @@ In another shell
 
 *This will start up the server at localhost:3000*
 
-# Credits
+## Credits
 - [PERN Course](https://www.youtube.com/watch?v=ldYcgPKEZC8&ab_channel=freeCodeCamp.org)
 - [Postgres Course](https://www.youtube.com/watch?v=qw--VYLpxG4&t=1823s&ab_channel=freeCodeCamp.org)
