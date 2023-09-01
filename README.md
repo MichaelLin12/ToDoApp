@@ -3,9 +3,9 @@ This is a simple ToDo Application.
 
 # Table of Contents
 
-    1. [Project Description](README.md#project-description)
-    2. [Get Started](README.md#get-started)
-    3. [Credits](README.md#credits)
+1. [Project Description](#project-description)
+2. [Get Started](#get-started)
+3. [Credits](#credits)
 
 ## Project Description
 - **What does the application do?**
