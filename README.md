@@ -16,7 +16,7 @@ This is a simple ToDo Application.
     - However, there were a few hiccups such as displaying a large number of elements in a list or a long text causing overflow and creating a bad UI experience. Along with that integrating all three environments from the database, to the backend, to the frontend was a challenge. There were multiple times where the individual parts worked but the integration failed. Lastly, it was a challenge to figure out effective ways to debug the event based code.
 - **What's next?**
     - The next steps of this project include:
-        1. Using Typescript instead of Javascript
+        1. Use Typescript instead of Javascript
         2. Deploying the application using Docker and the Cloud
         3. Running the database.sql script on initialization through stored procedures
         4. Cleaning up the React code by using hooks other than useState along with the many useEffect hooks
@@ -73,7 +73,7 @@ In another shell
 
 > `npm start`
 
-*This will start up the server at localhost:3000*
+*This will start up the client at localhost:3000*
 
 ## Credits
 - [PERN Course](https://www.youtube.com/watch?v=ldYcgPKEZC8&ab_channel=freeCodeCamp.org)
