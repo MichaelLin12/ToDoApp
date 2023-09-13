@@ -76,6 +76,16 @@ In another shell
 
 *This will start up the client at localhost:3000*
 
+## Updates
+
+* 9/13/2023 *
+
+The server is now written in typescript. Use
+
+> tsc
+
+to compile typescript code
+
 ## Credits
 - [PERN Course](https://www.youtube.com/watch?v=ldYcgPKEZC8&ab_channel=freeCodeCamp.org)
 - [Postgres Course](https://www.youtube.com/watch?v=qw--VYLpxG4&t=1823s&ab_channel=freeCodeCamp.org)

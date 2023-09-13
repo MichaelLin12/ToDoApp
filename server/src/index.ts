@@ -1,10 +1,11 @@
-// server/index.js
+// server
+import express,{Response, Request} from 'express'
+import pool from './database'
 
-const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const cors = require("cors");
-const pool = require("./database");
+//const pool = require("./database");
 
 // Middleware
 app.use(cors());
@@ -12,7 +13,7 @@ app.use(express.json());
 
 // Routes
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
     res.send("Hello World!");
 });
 
@@ -34,7 +35,7 @@ app.get("/", (req, res) => {
  * "date_column": "2020-12-31T00:00:00.000Z"
  * }
  */
-app.post("/addItem", async (req, res) => {
+app.post("/addItem", async (req: Request, res: Response) => {
     try {
         const { date_column, task_column, description_column } = req.body;
         console.log('Values from the client:');
@@ -45,7 +46,8 @@ app.post("/addItem", async (req, res) => {
         );
         res.json(newTask.rows);
     } catch (err) {
-        console.error(err.message);
+        if(err instanceof Error)
+            console.error(err.message);
     }
 });
 
@@ -68,7 +70,7 @@ app.post("/addItem", async (req, res) => {
  * ]
  * 
     */
-app.get("/getItems/:date", async (req, res) => {
+app.get("/getItems/:date", async (req: Request, res: Response) => {
     try {
         const { date } = req.params;
         console.log(date);
@@ -79,7 +81,8 @@ app.get("/getItems/:date", async (req, res) => {
         console.log(allTasks.rows);
         res.json(allTasks.rows);
     } catch (err) {
-        console.error(err.message);
+        if(err instanceof Error)
+            console.error(err.message);
     }
 });
 
@@ -99,7 +102,7 @@ app.get("/getItems/:date", async (req, res) => {
  * 
  */
 
-app.put("/changeItem/:id", async (req, res) => {
+app.put("/changeItem/:id", async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const { task, description, date } = req.body;
@@ -110,7 +113,8 @@ app.put("/changeItem/:id", async (req, res) => {
 
         res.json("Task was updated!");
     } catch (err) {
-        console.error(err.message);
+        if(err instanceof Error)
+            console.error(err.message);
     }
 });
 
@@ -121,7 +125,7 @@ app.put("/changeItem/:id", async (req, res) => {
  *  "id": 1
  * }
  */
-app.delete("/deleteItem/:id", async (req, res) => {
+app.delete("/deleteItem/:id", async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
         const deleteTask = await pool.query(
@@ -131,7 +135,8 @@ app.delete("/deleteItem/:id", async (req, res) => {
 
         res.json("Task was deleted!");
     } catch (err) {
-        console.error(err.message);
+        if(err instanceof Error)
+            console.error(err.message);
     }
 });
 
@@ -139,6 +144,6 @@ app.delete("/deleteItem/:id", async (req, res) => {
 
   
 app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
+    console.log(`Server listening on Port ${PORT}`);
 });
 
