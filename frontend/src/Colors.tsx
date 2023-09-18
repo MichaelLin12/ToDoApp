@@ -1,4 +1,4 @@
-const Colors = {
+export const Colors = {
     primary: '#007BFF', // Deep Blue: This color can be used for the main headers, buttons, and important elements to make them stand out.
     secondary: '#4CAF50', // Green: This color represents positivity and can be used for checkboxes or completed tasks.
     background: '#F5F5F5', // Light Gray: This color can be used for the background of the app. It's easy on the eyes.
