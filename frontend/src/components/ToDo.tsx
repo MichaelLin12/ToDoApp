@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import { styled } from '@mui/system';
 import Paper from '@mui/material/Paper';
-import {Colors} from '../Colors';
+import {Colors,ItemTypes} from '../Utilities';
 import Stack from '@mui/material/Stack';
 import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import StackItem from './StackItem';
+import Item from './Item';
 
 const Header = styled('div')({
     backgroundColor: Colors.primary,
@@ -13,11 +13,11 @@ const Header = styled('div')({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    borderRadius: '1rem',
     marginTop: '0.5rem',
     marginBottom: '0.5rem',
     paddingTop: '0.5rem',
-    paddingBottom: '0.5rem'
+    paddingBottom: '0.5rem',
+    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
 });
 
 const Palette = styled(Paper)(({ theme }) => ({
@@ -25,7 +25,6 @@ const Palette = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(1),
     maxHeight: '32rem',
     Height: '32rem',
-    borderRadius: '1rem',
     overflowY: 'auto'
 }));
 
@@ -44,23 +43,12 @@ export default function ToDo() {
                             setDate(newValue);
                         }}
                         views={['year', 'month', 'day']}
-                        sx={{ backgroundColor: Colors.background}}
+                        sx={{ backgroundColor: Colors.background,}}
                     />
                 </Header>
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
-                <StackItem />
+                <Item varient={ItemTypes.TASK}/>
+                <Item varient={ItemTypes.TASK}/>
+                <Item varient={ItemTypes.ADD}/>
             </Stack>
         </Palette>
     </>

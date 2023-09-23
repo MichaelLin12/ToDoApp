@@ -14,3 +14,10 @@ export const Colors = {
     error: '#FF3D00', // Dark Red: This color can be used for error messages or warnings.
     success: '#4CAF50' // Green: This color can be used to indicate successful actions, like saving or completing a task.
 }
+
+export const ItemTypes = {
+    TASK: 0,
+    ADD: 1,
+    TIME: 2,
+    WEATHER: 3
+}

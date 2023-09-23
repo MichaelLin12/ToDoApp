@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@mui/system';
 import Paper from '@mui/material/Paper';
-import {Colors} from '../Colors';
+import {Colors} from '../Utilities';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: Colors.background,
