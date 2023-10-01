@@ -24,13 +24,13 @@ function App() {
         }}
         >
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <Weather />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={6}>
               <ToDo />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <Time />
             </Grid>
           </Grid>

@@ -1,17 +1,14 @@
 import React from 'react'
 import { styled } from '@mui/system';
 import Paper from '@mui/material/Paper';
-import {Colors} from '../Utilities';
-
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: Colors.background,
-    padding: theme.spacing(1)
-  }));
+import {Colors, ItemTypes} from '../Utilities';
+import Item from './Item';
 
 export default function Weather() {
   return (
     <>
-        <Item elevation={2}>xs=4</Item>
+        <Item varient={ItemTypes.ADD}></Item>
+        <Item varient={ItemTypes.WEATHER}></Item>
     </>
   )
 }

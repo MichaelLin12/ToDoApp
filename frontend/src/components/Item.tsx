@@ -22,7 +22,7 @@ const Add = styled('div')({
   boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
   '&:hover': {
     boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.2)', // Increase shadow on hover
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
 });
 
