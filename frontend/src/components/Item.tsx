@@ -27,8 +27,11 @@ const Add = styled('div')({
 });
 
 interface Props{
-  varient: number
+  varient: number,
+  click?: () => void
 }
+
+
 
 export default function Item(props: Props) {
 
@@ -59,7 +62,7 @@ export default function Item(props: Props) {
   }else if(props.varient == ItemTypes.ADD){
     return (
       <Add>
-        <AddCircleOutlineOutlinedIcon sx={{fontSize: 40}}/>
+        <AddCircleOutlineOutlinedIcon sx={{fontSize: 40}} onClick={props.click}/>
       </Add>
     )
   }else if(props.varient == ItemTypes.TIME){

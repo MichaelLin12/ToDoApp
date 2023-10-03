@@ -20,4 +20,13 @@ export const ItemTypes = {
     ADD: 1,
     TIME: 2,
     WEATHER: 3
+};
+
+export interface Task {
+    id: number,
+    title: string,
+    description: string,
+    date: string
+    start: string,
+    end: string,
 }

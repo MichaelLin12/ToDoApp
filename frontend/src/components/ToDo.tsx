@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 import { styled } from '@mui/system';
 import Paper from '@mui/material/Paper';
-import {Colors,ItemTypes} from '../Utilities';
+import {Colors,ItemTypes, Task} from '../Utilities';
 import Stack from '@mui/material/Stack';
 import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Item from './Item';
+import Modal from '@mui/material/Modal';
+import AddTaskForm from './AddTaskForm';
 
 const Header = styled('div')({
     backgroundColor: Colors.primary,
@@ -30,8 +32,16 @@ const Palette = styled(Paper)(({ theme }) => ({
 
 
 
+
 export default function ToDo() {
     const [date, setDate] = useState(dayjs());
+    const [open, setOpen] = useState(false);
+    const [tasks, setTasks] = useState<Task[]>([]);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    const add = (task: Task) => {
+        setTasks([...tasks, task]);
+    }
   return (
     <>
         <Palette elevation={5}>
@@ -48,7 +58,13 @@ export default function ToDo() {
                 </Header>
                 <Item varient={ItemTypes.TASK}/>
                 <Item varient={ItemTypes.TASK}/>
-                <Item varient={ItemTypes.ADD}/>
+                <Item varient={ItemTypes.ADD} click={handleOpen}/>
+                <Modal
+                open={open}
+                onClose={handleClose}
+                >
+                    <AddTaskForm date={date.format('MM-DD-YYYY')} add={add} handleClose={handleClose}/>
+                </Modal>
             </Stack>
         </Palette>
     </>
