@@ -5,9 +5,10 @@ import {Colors,ItemTypes, Task} from '../Utilities';
 import Stack from '@mui/material/Stack';
 import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import Item from './Item';
 import Modal from '@mui/material/Modal';
 import AddTaskForm from './AddTaskForm';
+import AddItem from './Items/AddItem';
+import TaskItem from './Items/TaskItem';
 
 const Header = styled('div')({
     backgroundColor: Colors.primary,
@@ -56,9 +57,9 @@ export default function ToDo() {
                         sx={{ backgroundColor: Colors.background,}}
                     />
                 </Header>
-                <Item varient={ItemTypes.TASK}/>
-                <Item varient={ItemTypes.TASK}/>
-                <Item varient={ItemTypes.ADD} click={handleOpen}/>
+                <TaskItem/>
+                <TaskItem/>
+                <AddItem click={handleOpen}/>
                 <Modal
                 open={open}
                 onClose={handleClose}
